@@ -74,7 +74,7 @@ function Decrypt
     param ([byte[]]$FullData)
 
     $key = [System.Text.Encoding]::UTF8.GetBytes('D(G+KbPeShVmYq3t6v9y$B&E)H@McQfT')
-    $iv = $FullData[0..15]
+    $iv = [System.Text.Encoding]::UTF8.GetBytes('8y/B?E(G+KbPeShV')
     $cipherText = $FullData[16..($FullData.Length - 1)]
 
     $aesAlg = [System.Security.Cryptography.Aes]::Create()
